@@ -33,6 +33,10 @@ arcanist_path="$HOME/.local/share/arcanist"
     export PATH="$PATH:$arcanist_path/bin" &&
     source "$arcanist_path/resources/shell/bash-completion"
 
+export GOPATH=~/.go && mkdir $GOPATH
+export PATH="$PATH:$GOPATH"
+
+
 # history
 HIST_STAMPS="yyyy-mm-dd"
 HISTFILE=~/.zsh_history
