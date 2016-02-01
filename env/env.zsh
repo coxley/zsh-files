@@ -34,7 +34,7 @@ arcanist_path="$HOME/.local/share/arcanist"
     source "$arcanist_path/resources/shell/bash-completion"
 
 export GOPATH=~/.go && mkdir $GOPATH
-export PATH="$PATH:$GOPATH"
+export PATH="$PATH:$GOPATH/bin"
 
 
 # history
