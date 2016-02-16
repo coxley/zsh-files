@@ -10,7 +10,7 @@ export LC_ALL=en_US.UTF-8
 
 # applications
 export EDITOR='vim'
-export BROWSER='firefox'
+export BROWSER='google-chrome-beta'
 
 # virtualenvwrapper
 export WORKON_HOME=~/docs/envs
