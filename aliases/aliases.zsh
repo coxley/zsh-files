@@ -1,8 +1,8 @@
 #  Aliases
 
 # history
-alias hist10="$ history | awk '{print $4}' | sort | uniq -c | sort -nr | head"
-alias hist20="$ history | awk '{print $4}' | sort | uniq -c | sort -nr \
+alias hist10="history | awk '{print $4}' | sort | uniq -c | sort -nr | head"
+alias hist20="history | awk '{print $4}' | sort | uniq -c | sort -nr \
               | head -20"
 
 # General system
@@ -49,3 +49,7 @@ fi
 alias diff='diff -uNr'
 alias perms='stat -c "%A %a %n"'
 alias mplayer='mpv'
+
+alias cp='cp --backup=numbered'
+alias ln='ln --backup=numbered'
+alias mv='mv -f --backup=numbered'
