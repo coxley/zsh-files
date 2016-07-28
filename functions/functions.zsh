@@ -158,3 +158,11 @@ if [ -x "$(which convert)" ]; then
 
     }
 fi;
+
+# HG Log
+function hf {
+    hg log -r '. % master'  -T "{label('yellow', '{node|short}')} {label('blue', '{phabdiff}')} {label('yellow', '{desc|firstline}')}\n{files%' - {file}\n'}\n"
+}
+function hfg {
+     hg log --color=always -r '. % master'  -T "{files%' - {label('yellow', '{node|short}')} {if(phabdiff, '{label('blue', '{phabdiff}')}')} {if(desc, '{desc|firstline}')} {file}\n'}\n" | grep $1
+}

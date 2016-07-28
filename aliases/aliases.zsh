@@ -53,3 +53,11 @@ alias mplayer='mpv'
 alias cp='cp --backup=numbered'
 alias ln='ln --backup=numbered'
 alias mv='mv -f --backup=numbered'
+
+# vim
+
+if [ -f '/usr/local/bin/nvim' ]; then
+    alias vim='nvim'
+else
+    alias vim='vim'
+fi
