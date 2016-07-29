@@ -21,10 +21,9 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
 [ -n "$TMUX" ] && export TERM=screen-256color
 
 # path
-export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:/opt/vc/bin"
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.rvm/bin:$PATH"
 if which ruby > /dev/null 2>&1 && which gem >/dev/null; then
     PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
@@ -34,8 +33,9 @@ arcanist_path="$HOME/.local/share/arcanist"
     source "$arcanist_path/resources/shell/bash-completion"
 
 export GOPATH=~/.go && mkdir -p $GOPATH
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$GOPATH/bin:$PATH"
 
+export PATH="/opt/vc/bin:$PATH"
 
 # history
 HIST_STAMPS="yyyy-mm-dd"
