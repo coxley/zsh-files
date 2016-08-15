@@ -13,6 +13,7 @@ alias mkfs.ntfs='mkfs.ntfs -f'
 if hash ag 2> /dev/null; then
   alias grep='ag'
 fi
+alias gerp='grep'
 
 if hash hub 2> /dev/null; then
     alias git='hub'
