@@ -8,6 +8,7 @@ source $SOURCE/colors/colors.zsh
 
 # functions
 source $SOURCE/functions/functions.zsh
+source $SOURCE/functions/fzf.zsh
 
 # env
 source $SOURCE/env/env.zsh
