@@ -52,8 +52,8 @@ alias ln='ln --backup=numbered'
 alias mv='mv -f --backup=numbered'
 
 # vim
-
-if [ -f '/usr/local/bin/nvim' ]; then
+nvim_path=$(which nvim)
+if [ -x "$nvim_path" ] ; then
     alias vim='nvim'
 else
     alias vim='vim'
