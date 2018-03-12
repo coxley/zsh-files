@@ -58,3 +58,5 @@ if [ -x "$nvim_path" ] ; then
 else
     alias vim='vim'
 fi
+
+alias last_scrot='feh /tmp/$(ls -1tr /tmp | tail -1)'
