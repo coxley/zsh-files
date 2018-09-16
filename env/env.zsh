@@ -25,7 +25,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.rvm/bin:$PATH"
 if which ruby > /dev/null 2>&1 && which gem >/dev/null; then
-    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+    PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 arcanist_path="$HOME/.local/share/arcanist"
 [ -x "$arcanist_path" ] &&
