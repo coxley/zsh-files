@@ -9,6 +9,7 @@ source $SOURCE/colors/colors.zsh
 # functions
 source $SOURCE/functions/functions.zsh
 source $SOURCE/functions/fzf.zsh
+source $SOURCE/functions/scm-prompt.zsh
 
 # env
 source $SOURCE/env/env.zsh
