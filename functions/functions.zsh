@@ -166,3 +166,15 @@ function hf {
 function hfg {
      hg log --color=always -r '. % master'  -T "{files%' - {label('yellow', '{node|short}')} {if(phabdiff, '{label('blue', '{phabdiff}')}')} {if(desc, '{desc|firstline}')} {file}\n'}\n" | grep $1
 }
+
+
+function notif-toggle {
+    if [[ $1 = '' ]]
+    then
+        echo "Must provide duration in seconds"
+        return 1
+    fi
+    (notify-send DUNST_COMMAND_PAUSE \
+        && sleep $1 \
+        && notify-send DUNST_COMMAND_RESUME) & disown
+}
