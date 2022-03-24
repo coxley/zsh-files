@@ -1,16 +1,16 @@
-SOURCE=${0%/*}
+SOURCE=${0:a:h}
 
 # aliases
-source aliases/aliases.zsh
+source $SOURCE/aliases/aliases.zsh
 
-# color
-source colors/colors.zsh
+# colors
+source $SOURCE/colors/colors.zsh
 
-# funct
-source functions/functions.zsh
-source functions/fzf.zsh
-source functions/scm-prompt.zsh
+# functions
+source $SOURCE/functions/functions.zsh
+source $SOURCE/functions/fzf.zsh
+source $SOURCE/functions/scm-prompt.zsh
 
 # env
-source env/env.zsh
-source env/shell.zsh
+source $SOURCE/env/env.zsh
+source $SOURCE/env/shell.zsh
